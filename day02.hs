@@ -1,7 +1,4 @@
-{-# LANGUAGE OverloadedStrings #-}
-
 import Control.Monad (void)
-import Data.Char (digitToInt, isDigit)
 import Data.Either (rights)
 import Data.Map qualified as M
 import Data.Maybe (fromJust)
