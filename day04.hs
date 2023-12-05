@@ -43,7 +43,8 @@ main = do
       )
     $ parsed
   where
-    -- TODO: dont bruteforce (its slow)
     consequence :: [Int] -> [Int]
     consequence [] = []
-    consequence (x : xs) = 1 + sum (take x $ consequence xs) : consequence xs
+    consequence (x : xs) =
+      let xs' = consequence xs
+       in 1 + sum (take x xs') : xs'
